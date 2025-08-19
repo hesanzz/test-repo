@@ -8,8 +8,8 @@ Welcome to the React Coding Round repository! This project is designed to help y
 
 Each branch contains a basic React setup tailored to different stacks:
 
-- `basic-react` – React with plain JavaScript
-- `react-typescript` – React with TypeScript
+- `basic-react` – React with plain JavaScript + jest
+- `react-typescript` – React with TypeScript + jest
 
 ---
 
