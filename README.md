@@ -8,7 +8,6 @@ Welcome to the React Coding Round repository! This project is designed to help y
 
 Each branch contains a basic React setup tailored to different stacks:
 
-- `basic-react` – React with plain JavaScript + jest
 - `react-typescript` – React with TypeScript + jest
 
 ---
@@ -31,6 +30,24 @@ Follow these steps to get your environment up and running:
     ```bash
     npm run dev
 
+---
+## 🧪 Running Tests
+
+This project uses Vitest and Jest for unit testing. To run the test suite:
+1. **Running Tests**
+    ```bash
+    npm run test
+2. **Test Coverage**
+    ```bash
+    npm run coverage
+After running, a detailed coverage summary will be available in the terminal, and a full HTML report will be generated in the coverage/ directory.
+
+Make sure your components and utilities are well-tested to maintain high coverage and reliability.
+
+## 📈 Current Coverage: 100%
+All statements, branches, functions, and lines are covered by tests. Keep this benchmark as you expand the codebase.
+
+---
 ## 💡 Tips
 
 Keep your code clean and modular.
