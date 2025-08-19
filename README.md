@@ -29,7 +29,7 @@ Follow these steps to get your environment up and running:
     npm install
 4. **Start the development server**
     ```bash
-    npm start
+    npm run dev
 
 ## 💡 Tips
 
