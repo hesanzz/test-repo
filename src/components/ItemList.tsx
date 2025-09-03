@@ -10,7 +10,7 @@ interface ItemListProps {
 const ItemList = (props: ItemListProps) => {
     const { list, listName, toggleItemSelection, selectedItems } = props;
     return (
-        <div >
+        <div className="list-container">
             <h3>{listName}</h3>
             <ul className="item-list">
                 {list.map((item) => (

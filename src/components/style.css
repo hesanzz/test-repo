@@ -3,10 +3,44 @@
     gap: 20px;
     margin-top: 20px;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .item-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+.item-list li {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+/* Checkbox styling */
+.item-list input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #007bff;
+}
+
+button {
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.list-container {
+    width: 30%;
+    background-color: #555;
+    padding: 20px;
+    border-radius: 8px;
 }
