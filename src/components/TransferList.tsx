@@ -40,13 +40,20 @@ const TransferList = () => {
         setListA(newListA);
         setListB(newListB);
     }
+
+    const isTransferEnabled = (list: "A" | "B") => {
+        return list === "A" ? selectedItemsA.size > 0 : selectedItemsB.size > 0;
+    };
+
     return (
         <div className="transfer-list">
             <ItemList list={listA} selectedItems={selectedItemsA} listName="List A" toggleItemSelection={(id) => toggleItemSelection(id, "A")} />
 
             <div>
-                <button onClick={() => onTransferItems("AtoB")}>{'->'}</button>
-                <button onClick={() => onTransferItems("BtoA")}>{'<-'}</button>
+                <button onClick={() => onTransferItems("AtoB")} disabled={!isTransferEnabled("A")}
+                > {'->'}</button>
+                <button onClick={() => onTransferItems("BtoA")} disabled={!isTransferEnabled("B")}
+                > {'<-'}</button>
             </div>
 
             <ItemList list={listB} selectedItems={selectedItemsB} listName="List B" toggleItemSelection={(id) => toggleItemSelection(id, "B")} />

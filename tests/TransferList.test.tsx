@@ -47,4 +47,17 @@ describe("TransferList", () => {
             expect(screen.getByLabelText(mockListB[0].name)).toBeInTheDocument();
         })
     })
+
+    it("disables transfer buttons when no items are selected", async () => {
+        render(<TransferList />);
+        const transferButtonToB = screen.getByRole("button", { name: "->" });
+        const transferButtonToA = screen.getByRole("button", { name: "<-" });
+        expect(transferButtonToB).toBeDisabled();
+        expect(transferButtonToA).toBeDisabled();
+        const firstItemCheckbox = screen.getByLabelText(mockListA[0].name);
+        await userEvent.click(firstItemCheckbox);
+        expect(transferButtonToB).not.toBeDisabled();
+        expect(transferButtonToA).toBeDisabled();
+    });
+
 })
