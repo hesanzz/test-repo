@@ -1,10 +1,12 @@
 import './App.css'
+import TransferList from './components/TransferList'
 
 function App() {
 
   return (
     <>
-      <h1>React Interview Kit</h1>
+      <h1>Transfer List</h1>
+      <TransferList />
     </>
   )
 }
