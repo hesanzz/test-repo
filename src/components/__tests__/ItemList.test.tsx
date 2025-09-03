@@ -1,9 +1,9 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import ItemList from '../src/components/ItemList'
+import ItemList from '../ItemList'
 import userEvent from '@testing-library/user-event';
-import type { Item } from '../src/types/Item'
-import { initialListA } from '../src/constants/constant'
+import type { Item } from '../../types/Item'
+import { initialListA } from '../../constants/constant'
 
 const mockList: Item[] = initialListA;
 

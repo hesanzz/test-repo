@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { initialListA, initialListB } from '../src/constants/constant'
-import TransferList from "../src/components/TransferList";
-import type { Item } from '../src/types/Item'
+import { initialListA, initialListB } from '../../constants/constant'
+import TransferList from "../TransferList";
+import type { Item } from '../../types/Item'
 
 const mockListA: Item[] = initialListA;
 const mockListB: Item[] = initialListB;

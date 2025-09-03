@@ -3,6 +3,7 @@ import type { Item } from "../types/Item";
 import ItemList from "./ItemList";
 import { initialListA, initialListB } from "../constants/constant";
 import "./style.css";
+import { Button } from "./atoms/Button";
 const TransferList = () => {
 
     const [listA, setListA] = useState<Item[]>(initialListA);
@@ -49,11 +50,9 @@ const TransferList = () => {
         <div className="transfer-list">
             <ItemList list={listA} selectedItems={selectedItemsA} listName="List A" toggleItemSelection={(id) => toggleItemSelection(id, "A")} />
 
-            <div>
-                <button onClick={() => onTransferItems("AtoB")} disabled={!isTransferEnabled("A")}
-                > {'->'}</button>
-                <button onClick={() => onTransferItems("BtoA")} disabled={!isTransferEnabled("B")}
-                > {'<-'}</button>
+            <div className="button-container">
+                <Button onClick={() => onTransferItems("AtoB")} disabled={!isTransferEnabled("A")} direction="AtoB" />
+                <Button onClick={() => onTransferItems("BtoA")} disabled={!isTransferEnabled("B")} direction="BtoA" />
             </div>
 
             <ItemList list={listB} selectedItems={selectedItemsB} listName="List B" toggleItemSelection={(id) => toggleItemSelection(id, "B")} />
